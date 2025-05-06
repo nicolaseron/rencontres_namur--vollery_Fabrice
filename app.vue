@@ -150,7 +150,7 @@ function getWeekendDatesFromWeekNumber(week, year = new Date().getFullYear()) {
   sunday.setDate(monday.getDate() + 6)
 
   const format = (d) =>
-      `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getFullYear()).slice(-2)}`
+      `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getFullYear())}`
 
   return {
     friday: format(friday),
@@ -224,7 +224,7 @@ const submit = () => {
           console.log(`Données de ${sheetName}:`, data)
           const wb = XLSX.utils.book_new()
           const rows = []
-          rows.push(['Genre', 'Division', 'Serie', 'Club domicile', 'Club extérieur', 'Date', 'Heure'])
+          rows.push(['Genre', 'Division', 'Serie', 'Club domicile', 'Club extérieur', 'Semaine', 'Date', 'Heure'])
 
           for (let i = 0; i < data.length; i++) {
             for (let j = 0; j < data[i].length; j++) {
@@ -236,8 +236,8 @@ const submit = () => {
                 const extTeam = result.teams[extTeamNumber - 1]
                 const weekmatch = data[i][j]
                 const weekendPref = result.weekendsPreferences[weekmatch - 1]
-                console.log()
                 const dates = weekendPref?.dates ?? {}
+                const selectedWeekNumber = result.weekendsPreferences[weekmatch - 1]?.week ?? 'N/A'
 
                 let matchDate = ''
                 switch (homeTeam?.preferredDay) {
@@ -253,7 +253,7 @@ const submit = () => {
                   default:
                     matchDate = 'N/A'
                 }
-                rows.push([selectedGender.value, selectedDivision.value, selectedSeries.value, homeTeam.name, extTeam.name, matchDate, homeTeam.preferredHour])
+                rows.push([selectedGender.value, selectedDivision.value, selectedSeries.value, homeTeam.name, extTeam.name, selectedWeekNumber, matchDate, homeTeam.preferredHour])
               }
             }
           }
