@@ -125,19 +125,19 @@ export const club = {
                 {name: "V.Sport B", preferredDay: "dimanche", preferredHour: "14:00"},
                 {name: "VBC Lesse & Lhomme E", preferredDay: "dimanche", preferredHour: "11:00"},
                 {name: "V.C Ciney E", preferredDay: "samedi", preferredHour: "13:00"},
+            ],
+            b: [
+                {name: "Smars Volley Dinant C", preferredDay: "Samedi", preferredHour: "13:30"},
+                {name: "V.C. Prondeville D", preferredDay: "samedi", preferredHour: "16:00"},
+                {name: "VBC Lesse & Lhomme D", preferredDay: "dimanche", preferredHour: "14:30"},
+                {name: "V.C. Gembloux C", preferredDay: "dimanche", preferredHour: "11:15"},
+                {name: "V.C. Jemeppe E", preferredDay: "samedi", preferredHour: "14:00"},
+                {name: "Namur Volley D", preferredDay: "samedi", preferredHour: "16:30"},
+                {name: "Voll'Ohey D", preferredDay: "samedi", preferredHour: "14:00"},
+                {name: "V.C. Ciney F", preferredDay: "samedi", preferredHour: "17:00"},
+                {name: "V.C. Tellinam D", preferredDay: "dimanche", preferredHour: "11:00"},
+                {name: "Floor F F", preferredDay: "samedi", preferredHour: "14:00"},
             ]
-        },
-        b: [
-            {name: "Smars Volley Dinant C", preferredDay: "Samedi", preferredHour: "13:30"},
-            {name: "V.C. Prondeville D", preferredDay: "samedi", preferredHour: "16:00"},
-            {name: "VBC Lesse & Lhomme D", preferredDay: "dimanche", preferredHour: "14:30"},
-            {name: "V.C. Gembloux C", preferredDay: "dimanche", preferredHour: "11:15"},
-            {name: "V.C. Jemeppe E", preferredDay: "samedi", preferredHour: "14:00"},
-            {name: "Namur Volley D", preferredDay: "samedi", preferredHour: "16:30"},
-            {name: "Voll'Ohey D", preferredDay: "samedi", preferredHour: "14:00"},
-            {name: "V.C. Ciney F", preferredDay: "samedi", preferredHour: "17:00"},
-            {name: "V.C. Tellinam D", preferredDay: "dimanche", preferredHour: "11:00"},
-            {name: "Floor F F", preferredDay: "samedi", preferredHour: "14:00"},
-        ]
-    },
-};
+        }
+    }
+}
